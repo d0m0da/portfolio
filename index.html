@@ -14,7 +14,13 @@
     <div id="wrap">
         <header>
             <h1 class="blind">포트폴리오</h1>
-            <nav class="gnb"></nav>
+            <nav class="gnb_menu">
+                <button class="gnb-item home">HOME</button>
+                <button class="gnb-item profile">PROFILE</button>
+                <button class="gnb-item project01">STAR</button>
+                <button class="gnb-item project02">GUNSAN</button>
+                <button class="gnb-item end">CONTACT</button>
+            </nav>
         </header>
         <main class="container">
             <div class="swiper portfolio_v"> <!-- 팝업의 높이와 넓이를 css에서 줄 수 있는 요소-->
@@ -92,7 +98,7 @@
                                     <h2>Project01</h2>
                                     <div class="wrapper">
                                         <div class="tit">
-                                            <a href="star/index.html">
+                                            <a href="star/index.html" target="_blank" title="새창열림">
                                                 <h3>
                                                     <span>01.</span>
                                                     <span>충북대학교 <br>천문대</span>
@@ -112,14 +118,64 @@
                                                     <div class="main_font">
                                                         <div class="font_wrap">
                                                             <h5>MAIN FONT</h5>
-                                                            <p>PAPERLOGY REGULAR</p>
+                                                            <p class="paper">PAPERLOGY REGULAR</p>
                                                         </div>
-                                                        <span>가 나 다 라 마 바 사 아 자 차 카 타 파 하</span>
+                                                        <span class="paper">가 나 다 라 마 바 사 아 자 차 카</span>
                                                     </div>
                                                     <div class="basic_font">
                                                         <div class="font_wrap">
                                                             <h5>BASIC FONT</h5>
-                                                            <p>PAPERLOGY REGULAR</p>
+                                                            <p class="paper">PAPERLOGY REGULAR</p>
+                                                        </div>
+                                                        <span class="paper">가 나 다 라 마 바 사 아 자 차 카 타 파 하</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="color">
+                                                <h4>COLOR</h4>
+                                                <div class="project_info">
+                                                    <ul>
+                                                        <li class="star_color01"><span class="blind">#735E96</span></li>
+                                                        <li class="star_color02"><span class="blind">#162246</span></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <a href="star/index.html" target="_blank" title="새창열림" class="cursor_target"></a>
+                                    </div>
+                                </li> 
+                                <li class="swiper-slide project02">
+                                    <h2>Project02</h2>
+                                    <div class="wrapper">
+                                        <div class="tit">
+                                            <a href="gunsan/index.html" target="_blank" title="새창열림">
+                                                <h3>
+                                                    <span>02.</span>
+                                                    <span>군산 <br>예술의전당</span>
+                                                </h3>
+                                            </a>
+                                        </div>
+                                        <div class="list">
+                                            <div class="overview">
+                                                <h4>OVERVIEW</h4>
+                                                <div class="project_info">
+                                                    <p>군산 예술의전당의 건축적 선과 구조미를 모던하게 해석해 단정한 여백과 절제된 레이아웃으로 예술 공간의 세련된 분위기를 전달하고자 했습니다.</p>
+                                                </div>
+                                            </div>
+                                            <div class="typography">
+                                                <h4>TYPOGRAPHY</h4>
+                                                <div class="project_info">
+                                                    <div class="main_font">
+                                                        <div class="font_wrap">
+                                                            <h5>MAIN FONT</h5>
+                                                            <p class="genti">GENTIUM BOOK PLUS BOLD</p>
+                                                        </div>
+                                                        <span class="genti">A B C D E F G H I J K L M N O</span>
+                                                    </div>
+                                                    <div class="basic_font">
+                                                        <div class="font_wrap">
+                                                            <h5>BASIC FONT</h5>
+                                                            <p>PRETENDARD REGULAR</p>
                                                         </div>
                                                         <span>가 나 다 라 마 바 사 아 자 차 카 타 파 하</span>
                                                     </div>
@@ -128,25 +184,40 @@
                                             <div class="color">
                                                 <h4>COLOR</h4>
                                                 <div class="project_info">
-                                                    <span>#735E96</span>
-                                                    <span>#162246</span>
+                                                    <ul>
+                                                        <li class="gunsan_color01"><span class="blind">#2A2A2A</span></li>
+                                                        <li class="gunsan_color02"><span class="blind">#3574BB</span></li>
+                                                    </ul>
                                                 </div>
                                             </div>
                                         </div>
+                                        <a href="gunsan/index.html" target="_blank" title="새창열림" class="cursor_target"></a>
                                     </div>
-                                </li> 
-                                <li class="swiper-slide project02">
-                                    슬라이드4
                                 </li> 
                             </ul>
                         </div>
                     </li>  
-                    <li class="swiper-slide">
-                        슬라이드5
-                    </li>  
+                    <li class="swiper-slide end">
+                        <div class="wrapper">
+                            <div class="tit">
+                                <h2>
+                                    <span class="tit_t">Thank you</span> <br>
+                                    <span class="tit_b">for watching</span>
+                                </h2>
+                                <div class="info">
+                                    <h3>CONTACT ME</h3>
+                                    <span>ssssuunnn99@gmail.com</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
                 </ul>
             </div>
         </main>
     </div>
+    <div class="cursor_spin">
+        <img src="portfolio/images/spin.png" alt="홈페이지 이동" class="spin_txt">
+        <img src="portfolio/images/fixed_icon.png" alt="별 아이콘" class="center_icon">
+    </div> 
 </body>
 </html>

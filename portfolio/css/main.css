@@ -3,6 +3,13 @@
 @import url(fonts.css);
 @import url(layout.css);
 
+.paper {
+    font-family: "Paperozi";
+}
+.genti {
+    font-family: "Gentium Book Plus";
+}
+
 .swiper {
     width: 100vw;
     height: 100vh;
@@ -253,12 +260,33 @@
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 45 45' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M22.5 0C34.9264 0 45 10.3517 45 23.1211C45 33.2446 38.6686 41.8484 29.8529 44.9794C29.7898 44.9436 29.6927 44.9356 29.5543 44.963C28.6253 45.1466 28.1982 44.6039 28.0885 44.2827L28.0789 44.2523V39.6532L28.8627 39.7656C29.6311 39.8288 31.4078 39.8983 32.3668 39.6709C33.5656 39.3866 34.7182 39.1023 35.5943 37.2071C36.4703 35.312 37.4385 34.0327 37.8996 33.7484C38.0805 33.6369 38.8217 33.2746 39.1445 32.3744C38.4221 32.0586 36.7008 31.7869 35.5943 33.2273C34.2111 35.0277 33.1506 36.7807 31.9518 36.8755C30.7531 36.9702 29.1393 36.8755 28.2633 36.4491C28.1921 36.4144 28.1228 36.3884 28.0557 36.3697C27.9474 35.2243 27.4648 34.1915 26.7351 33.4023C29.666 32.9177 32.2793 31.8736 34.0727 30.0859C36.0073 28.1574 36.8391 25.0584 36.8391 22.4104C36.8391 19.9354 36.2915 17.5932 34.5799 15.7299C34.5611 15.7094 34.5421 15.689 34.5231 15.6686C34.5605 15.6111 34.595 15.5476 34.626 15.4774C35.5481 13.3927 34.8258 10.5342 34.3494 9.36547C32.874 8.87273 29.585 10.8026 28.125 11.8292C28.1623 11.8728 28.2005 11.917 28.2395 11.9619C26.4218 11.3965 24.4455 11.0868 22.4539 11.0868C20.5134 11.0868 18.624 11.3369 16.8882 11.822C15.4123 10.7899 12.1612 8.89202 10.6967 9.38111C10.2203 10.5498 9.49795 13.4084 10.4201 15.493C10.4295 15.5144 10.4394 15.535 10.4494 15.5551C10.4397 15.566 10.4298 15.5769 10.4201 15.5878C8.52971 17.6251 8.06865 19.9957 8.06865 22.4104C8.06865 25.1415 8.8819 28.3196 10.9273 30.2754C12.7067 31.977 15.2934 32.9564 18.162 33.4139C17.4413 34.1983 16.9637 35.2213 16.8533 36.3554C16.83 36.3651 16.8065 36.3758 16.7828 36.3873C15.9068 36.8137 14.293 36.9085 13.0943 36.8137C11.8955 36.719 10.835 34.966 9.45184 33.1655C8.34529 31.7252 6.62398 31.9968 5.90164 32.3127C6.22439 33.2129 6.96561 33.5752 7.14652 33.6867C7.60758 33.971 8.57582 35.2502 9.45184 37.1454C10.3279 39.0406 11.4805 39.3249 12.6793 39.6091C13.6383 39.8365 15.415 39.7671 16.1834 39.7039L16.8289 39.6113V44.3717C16.6767 44.6935 16.2471 45.1305 15.3996 44.963C15.2745 44.9383 15.1831 44.9423 15.1202 44.9697C6.31852 41.8308 0 33.2343 0 23.1211C0 10.3517 10.0736 0 22.5 0Z' fill='%2300684D'/%3E%3C/svg%3E%0A");
 }
 
-/* project */
+/* project01 */
 .swiper-slide.project {
     background: url(../images/project_bg.jpg) no-repeat center center / cover;
 }
 .swiper-slide.project .swiper-slide.project01 {
     position: relative;
+    overflow: hidden
+}
+.swiper-slide.project .swiper-slide.project01::after {
+    content: "";
+    position: absolute;
+    right: -156px;
+    top: 0;
+    z-index: -1;
+    width: 80%;
+    height: 100%;
+    background: url(../images/project01_mockup.png) no-repeat right center / contain;
+}
+.swiper-slide.project .swiper-slide.project01::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -2;
+    width: 40%;
+    height: 100%;
+    background-color: rgba(115, 94, 150, 0.2)   ;
 }
 .swiper-slide.project .swiper-slide.project01 h2 {
     font-family: "Ephesis";
@@ -283,7 +311,8 @@
     background-color: #DEDBE3;
 }
 .swiper-slide.project .swiper-slide.project01 .tit {
-    margin-top: 207px;
+    margin-top: 200px;
+    color: #162246;
 }
 .swiper-slide.project .swiper-slide.project01 .tit a {
     display: inline-block;
@@ -295,14 +324,15 @@
     font-weight: 700;
 }
 .swiper-slide.project .swiper-slide.project01 .list {
-    margin-top: 80px;
+    margin-top: 75px;
 }
 .swiper-slide.project .swiper-slide.project01 .list > div {
     display: flex;
-    margin-bottom: 72px;
+    margin-bottom: 60px;
 }
 .swiper-slide.project .swiper-slide.project01 .list > div h4 {
     font-size: 24px;
+    color: #162246;
 }
 .swiper-slide.project .swiper-slide.project01 .list > div .project_info {
     width: 500px;
@@ -315,6 +345,270 @@
 .swiper-slide.project .swiper-slide.project01 .list .typography .project_info {
     margin-left: 54px;
 }
+.swiper-slide.project .swiper-slide.project01 .list .typography .project_info > div .font_wrap {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--color-black50);
+}
+.swiper-slide.project .swiper-slide.project01 .list .typography .project_info > div .font_wrap h5 {
+    font-size: 20px;
+    font-weight: 700;
+}
+.swiper-slide.project .swiper-slide.project01 .list .typography .project_info > div span {
+    display: block;
+    margin-top: 10px;
+}
+.swiper-slide.project .swiper-slide.project01 .list .typography .project_info .main_font span {
+    font-size: 40px;
+    color: #111;
+}
+.swiper-slide.project .swiper-slide.project01 .list .typography .project_info .basic_font {
+    margin-top: 36px;
+}
 .swiper-slide.project .swiper-slide.project01 .list .color .project_info {
     margin-left: 143px;
 }
+.swiper-slide.project .swiper-slide.project01 .list .color .project_info ul {
+    display: flex;
+    gap: 0 16px;
+}
+.swiper-slide.project .swiper-slide.project01 .list .color .project_info ul li {
+    display: inline-block;
+    width: 49px;
+    height: 49px;
+    border-radius: 50%;
+}
+.swiper-slide.project .swiper-slide.project01 .list .color .project_info ul li.star_color01 {
+    background-color: #735E96;
+}
+.swiper-slide.project .swiper-slide.project01 .list .color .project_info ul li.star_color02 {
+    background-color: #162246;
+}
+.swiper-slide.project .swiper-slide.project01 .cursor_target {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;
+}
+
+/* project02 */
+.swiper-slide.project .swiper-slide.project02 {
+    position: relative;
+    overflow: hidden
+}
+.swiper-slide.project .swiper-slide.project02::after {
+    content: "";
+    position: absolute;
+    left: -290px;
+    top: 0;
+    z-index: -1;
+    width: 80%;
+    height: 100%;
+    background: url(../images/project02_mockup.png) no-repeat right center / contain;
+}
+.swiper-slide.project .swiper-slide.project02::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -2;
+    width: 40%;
+    height: 100%;
+    background-color: rgba(53, 116, 187, 0.2);
+}
+.swiper-slide.project .swiper-slide.project02 h2 {
+    font-family: "Ephesis";
+    font-size: 60px;
+    font-weight: 400;
+    line-height: 1.3;
+    color: #111;
+    position: absolute;
+    right: 0;
+    top: 52px;
+    transform: rotate(38deg);
+}
+.swiper-slide.project .swiper-slide.project02 h2::before {
+    content: "";
+    position: absolute;
+    left: -26px;
+    bottom: 0px;
+    z-index: -1;
+    width: 254px;
+    height: 32px;
+    -webkit-transform: skew(25deg);
+    background-color: rgba(53, 116, 187, 0.2);
+}
+.swiper-slide.project .swiper-slide.project02 .tit {
+    margin-top: 200px;
+    color: #2a2a2a;
+    display: flex;
+    justify-content: flex-end;
+}
+.swiper-slide.project .swiper-slide.project02 .tit a {
+    display: inline-block;
+}
+.swiper-slide.project .swiper-slide.project02 .tit a h3 {
+    display: flex;
+    gap: 0 16px;
+    font-size: 50px;
+    font-weight: 700;
+}
+.swiper-slide.project .swiper-slide.project02 .list {
+    margin-top: 75px;
+}
+.swiper-slide.project .swiper-slide.project02 .list > div {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-bottom: 60px;
+}
+.swiper-slide.project .swiper-slide.project02 .list > div h4 {
+    font-size: 24px;
+    color: #2a2a2a;
+}
+.swiper-slide.project .swiper-slide.project02 .list > div .project_info {
+    width: 500px;
+    overflow: hidden;
+}
+.swiper-slide.project .swiper-slide.project02 .list .overview .project_info {
+    margin-right: 100px;
+    font-size: 20px;
+}
+.swiper-slide.project .swiper-slide.project02 .list .overview .project_info p {
+    text-align: right;
+}
+.swiper-slide.project .swiper-slide.project02 .list .typography .project_info {
+    margin-right: 54px;
+}
+.swiper-slide.project .swiper-slide.project02 .list .typography .project_info > div .font_wrap {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    border-bottom: 1px solid var(--color-black50);
+}
+.swiper-slide.project .swiper-slide.project02 .list .typography .project_info > div .font_wrap h5 {
+    font-size: 20px;
+    font-weight: 700;
+}
+.swiper-slide.project .swiper-slide.project02 .list .typography .project_info > div span {
+    display: block;
+    margin-top: 10px;
+    text-align: right;
+}
+.swiper-slide.project .swiper-slide.project02 .list .typography .project_info .main_font span {
+    font-size: 40px;
+    color: #111;
+    font-weight: 700;
+}
+.swiper-slide.project .swiper-slide.project02 .list .typography .project_info .basic_font {
+    margin-top: 36px;
+}
+.swiper-slide.project .swiper-slide.project02 .list .color .project_info {
+    margin-right: 143px;
+}
+.swiper-slide.project .swiper-slide.project02 .list .color .project_info ul {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 0 16px;
+}
+.swiper-slide.project .swiper-slide.project02 .list .color .project_info ul li {
+    display: inline-block;
+    width: 49px;
+    height: 49px;
+    border-radius: 50%;
+}
+.swiper-slide.project .swiper-slide.project02 .list .color .project_info ul li.gunsan_color01 {
+    background-color: #2A2A2A;
+}
+.swiper-slide.project .swiper-slide.project02 .list .color .project_info ul li.gunsan_color02 {
+    background-color: #3574BB;
+}
+.swiper-slide.project .swiper-slide.project02 .cursor_target {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;
+}
+
+/* end */
+.swiper-slide.end {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(../images/end_bg.jpg) no-repeat center center / cover;
+    color: var(--color-white);
+}
+.swiper-slide.end .tit {
+    margin-top: 120px;
+}
+.swiper-slide.end .tit h2 {
+    font-family: "Ephesis";
+    font-size: 200px;
+    line-height: 0.9;
+    text-align: center;
+    text-shadow: 6px 6px rgba(255, 255, 255, 0.1);
+}
+.swiper-slide.end .tit h2 .tit_t {
+    display: inline-block;
+    transform: translateX(-26%);
+}
+.swiper-slide.end .tit h2 .tit_b {
+    display: inline-block;
+    transform: translateX(26%);
+}
+.swiper-slide.end .info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 170px;
+    font-size: 22px;
+    font-family: "MuseumClassic";
+    position: relative;
+}
+.swiper-slide.end .info::before {
+    content: "";
+    position: absolute;
+    left: 13%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 65%;
+    height: 1px;
+    background-color: var(--color-white50);
+}
+
+/* 마우스 커서 */
+.cursor_spin {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 150px;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.15s ease-out;
+    z-index: 9999;
+}
+
+.cursor_spin .spin_txt {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    animation: spin 6s linear infinite;
+    top: 0;
+    left: 0;
+}
+
+.cursor_spin .center_icon {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+    100% { transform: rotate(360deg); }
+}
+

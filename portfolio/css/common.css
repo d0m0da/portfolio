@@ -29,13 +29,13 @@
     --color-black80: rgba(0, 0, 0, 0.8);
     --color-black90: rgba(0, 0, 0, 0.9);
     --header-h: 100px;
-    --wrapper-margin: 40px;
+    --wrapper-margin: 30px;
 
 }
 @media screen and (max-width:1024px){
     :root {
         --header-h: 77px;
-        --wrapper-margin: 28px;
+        --wrapper-margin: 24px;
     }
 }/* @media */
 @media screen and (max-width:768px){
@@ -86,16 +86,13 @@ body {
 }
 /*
     계속(태블릿, 모바일) 좌우여백을 고정 값(px)을 적용
-    x + 0 + 40 = 1340
-
-    좌우의 여백을 가변 %로 적용
-    1474 * 0.08(4% + 4%) = 117.92 + 1474 = 1,591.92
+    1474 + 30 + 30 = 1534
 */
 
-@media screen and (max-width:1592px){
+@media screen and (max-width:1534px){
     .wrapper {
         width: auto;
-        margin: 0 4%;
+        margin: 0 var(--wrapper-margin);
     }
 }/* @media */
 
@@ -116,7 +113,7 @@ body {
     color: var(--color-white);
 }
 
-h2, h3, h4 {
+h2, h3, h4, h5, h6 {
     font-family: "MuseumClassic", sans-serif;
     font-weight: 700;
     line-height: 1.3;
